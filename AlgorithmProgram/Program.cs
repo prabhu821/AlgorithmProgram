@@ -10,7 +10,8 @@ namespace AlgorithmProgram
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\n\nSelect option to execute \n1.Insertion Sort \n2.Bubble Sort \n3.Merge Sort \n4.Exit");
+                Console.WriteLine("\n\nSelect option to execute \n1.Insertion Sort \n2.Bubble Sort \n3.Merge Sort " +
+                    "\n4.Anagram Detection \n5.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -37,6 +38,10 @@ namespace AlgorithmProgram
                         {
                             Console.Write(arrPass[i] + " ");
                         }
+                        break;
+                    case 4:
+                        AnagramDetection anagramDetection = new AnagramDetection();
+                        anagramDetection.Anagram();
                         break;
                     default:
                         flag = false;
