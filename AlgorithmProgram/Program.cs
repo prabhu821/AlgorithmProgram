@@ -11,7 +11,7 @@ namespace AlgorithmProgram
             while (flag)
             {
                 Console.WriteLine("\n\nSelect option to execute \n1.Insertion Sort \n2.Bubble Sort \n3.Merge Sort " +
-                    "\n4.Anagram Detection \n5.Exit");
+                    "\n4.Anagram Detection \n5.Prime Number \n6.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -42,6 +42,10 @@ namespace AlgorithmProgram
                     case 4:
                         AnagramDetection anagramDetection = new AnagramDetection();
                         anagramDetection.Anagram();
+                        break;
+                    case 5:
+                        PrimeNumber primeNumber = new PrimeNumber();
+                        primeNumber.Check();
                         break;
                     default:
                         flag = false;
