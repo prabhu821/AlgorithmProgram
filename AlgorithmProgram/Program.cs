@@ -4,14 +4,16 @@ namespace AlgorithmProgram
 {
     internal class Program
     {
+        public static string filepath = @"D:\OneDrive\Documents\BridgeLabz\AlgorithmProgram\AlgorithmProgram\Words.txt";
         static void Main(string[] args)
         {
+            
             Console.WriteLine("Welcome to Algorithm Programs");
             bool flag = true;
             while (flag)
             {
                 Console.WriteLine("\n\nSelect option to execute \n1.Insertion Sort \n2.Bubble Sort \n3.Merge Sort " +
-                    "\n4.Anagram Detection \n5.Prime Number \n6.Exit");
+                    "\n4.Anagram Detection \n5.Prime Number \n6.Binary Search \n7.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -46,6 +48,13 @@ namespace AlgorithmProgram
                     case 5:
                         PrimeNumber primeNumber = new PrimeNumber();
                         primeNumber.Check();
+                        break;
+                    case 6:
+                        BinarySearch search = new BinarySearch();
+                        search.ReadTextFile(filepath);
+                        Console.WriteLine("\nEnter word you want to search");
+                        string str =Console.ReadLine(); 
+                        search.BinarySearchOperation(str);
                         break;
                     default:
                         flag = false;
